@@ -19,10 +19,11 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 display: block;
-                width: 395px;
-                height: 220px;
+                max-width: 90%;
+                height: auto;
                 text-indent: -99999px;
-                margin-left: 392px;
+                margin: 20px auto;
+                position: relative;
             }
             .Games {
                 background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
