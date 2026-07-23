@@ -19,10 +19,10 @@
                 background-repeat: no-repeat;
                 background-position: center;
                 display: block;
-                max-width: 90%;
-                height: auto;
+                width: auto;
+                height: 200px;
                 text-indent: -99999px;
-                margin: 20px auto;
+                margin-left: -80px;
                 position: relative;
             }
             .Games {
@@ -46,6 +46,29 @@
                 position: relative;
                 left: 40spx;
             }
+
+            .tablet {
+                background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+                color:beige;
+                padding: 20px;
+                display: flex;
+                flex-direction:row;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .tablet figure img {
+                border: 2px solid white;
+                border-radius: 20%;
+                box-shadow: black 5px 5px 5px
+            }
+            .tablet {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                position: relative;
+                left: 40spx;
+            }
+
             .buy-btn {
                 background-color: #302b63;
                 color:white;
@@ -93,3 +116,35 @@
             li:hover {
                 background: transparent
             }
+
+
+/* Resulation setting */
+
+@media screen and (max-width: 610px) {
+    .Games {
+        display: block;
+    }
+    .tablet {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .Games {
+        display: none;
+    }
+    .tablet {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media screen and (min-width: 1201px) {
+    .tablet {
+        display: none;
+    }
+    .Games {
+        display: flex;
+    }
+}
