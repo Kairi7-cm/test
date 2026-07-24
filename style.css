@@ -1,66 +1,307 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name=""viewport" content="width=device-width, intial-scale=1.0">
-        <title>Practice</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <nav>
-        <section class="sign">
-            <a><button class="signup">Register</button></a>
-        </section>
-        <section class="log">
-            <a><button class="login">Login</button></a>
-        </section>
-        </nav>
-        <header>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="index.html" class="navhome"> <img src="images/home1.png" class="homepage">Home</a></li>
-                    <li><a title="Coming Soon" class="shopnav"> <img src="images/shop.png" class="shop">Shop</a></li>
-                    <li><a title="Coming Soon" class="ordernav"> <img src="images/order.png" class="order">Order</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section class="Games">
-            <figure>
-                <img src="images/gta.png" alt="Gta V" width="300">
-                <figcaption>Gta V</figcaption>
-                <button class="buy-btn">Buy Rs1,999</button>
-            </figure>
+            body {
+                background:#414164;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                margin: 0;
+                padding: 0px;
+                outline: none;
+            }
+            header {
+                background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+                color:aliceblue;
+                padding: 0px;
+                text-align: center;
+            }
+            header a {
+                color: white;
+                text-decoration: none;
+                padding: 0px;
+            }
+            /*.logo {
+                background-image: url("images/logo6.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                display: block;
+                width: auto;
+                height: 200px;
+                text-indent: -99999px;
+                margin-left: -80px;
+                position: relative;
+            }*/
+            .Games {
+                background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+                color:beige;
+                padding: 220px;
+                display: flex;
+                flex-direction:row;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .Games figure img {
+                border: 2px solid white;
+                border-radius: 20%;
+                box-shadow: black 5px 5px 5px
+            }
+            .Games {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                position: relative;
+                left: 40spx;
+            }
 
-            <figure>
-                <img src="images/Frozon.png" alt="Frozen Horizon" width="300">
-                <figcaption>Froza Horizon</figcaption>
-                <button class="buy-btn">Buy Rs2,500</button>
-            </figure>
+            .tablet {
+                background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+                color:beige;
+                padding: 20px;
+                display: flex;
+                flex-direction:row;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            .tablet figure img {
+                border: 2px solid white;
+                border-radius: 20%;
+                box-shadow: black 5px 5px 5px
+            }
+            .tablet {
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                position: relative;
+                left: 40spx;
+            }
 
-            <figure>
-                <img src="images/Minecraft.jpeg" alt="Minecraft" width="300">
-                <figcaption>Minecraft</figcaption>
-                <button class="buy-btn">Buy Rs2,600</button>
-            </figure>
-        </section>
-        <section class="tablet">
-            <figure>
-                <img src="images/gta.png" alt="Gta V" width="300">
-                <figcaption>Gta V</figcaption>
-                <button class="buy-btn">Buy Rs1,999</button>
-            </figure>
+            .buy-btn {
+                background-color: #302b63;
+                color:white;
+                border: 3px soild black;
+                cursor: pointer;
+                transition: 0.3s;
+                font-weight: bold;
+            }
+            nav{
+                height: 40px;
+                padding: 15px 20px;
+            }
 
-            <figure>
-                <img src="images/Frozon.png" alt="Frozen Horizon" width="300">
-                <figcaption>Froza Horizon</figcaption>
-                <button class="buy-btn">Buy Rs2,500</button>
-            </figure>
+            ul {
+                margin: 0;
+                padding: 0;
+                justify-content: center;
+                gap: 50px;
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+            }
+            li {
+                display:inline-table;
+                margin-left: 15px;
+                padding: 10px;
+                position: relative;
+                margin-right: 15px;
+                bottom: -1px;
+                position: relative;
+                top: -60px;
+                left: 10px;
+                text-decoration: none;
+            }
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: none;
+            }
+            li:hover {
+                background: transparent
+            }
 
-            <figure>
-                <img src="images/Minecraft.jpeg" alt="Minecraft" width="300">
-                <figcaption>Minecraft</figcaption>
-                <button class="buy-btn">Buy Rs2,600</button>
-            </figure>
-        </section>
-    </body>
-</html>
+
+
+/* Resulation setting */
+
+@media screen and (max-width: 610px) {
+    .Games {
+        display: block;
+        flex-wrap: wrap;
+        min-height: 650px;
+    }
+    .tablet {
+        display: none;
+    }
+    .sign {
+        display: none;
+    }
+    .log {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    .Games {
+        display: none;
+    }
+    .tablet {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 640px;
+    }
+    .sign {
+        display: none;
+    }
+    .log {
+        display: none;
+    }
+}
+
+
+@media screen and (min-width: 1201px) {
+    .tablet {
+        display: none;
+    }
+    .Games {
+        display: flex;
+    }
+    .sign {
+        display: none;
+    }
+    .log {
+        display: none;
+    }
+    .menu {
+        display: block;
+        position: relative;
+        margin-top: -833px;
+        left: 25px;
+        height: 25px;
+    }
+}
+
+@media screen and (min-width: 1271px) {
+    .sign {
+        display: block;
+    }
+    .log {
+        display: block;
+    }
+}
+
+
+
+/* Login Section */
+
+.signup {
+    background-color: orange;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    margin-left: 1140px;
+    top: -0px;
+   
+}
+.login {
+    display: inline-block;
+    margin-left: 1145px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    position: relative;
+    right: 90px;
+    top: -34.3px;
+    color: black;
+    border: -2px solid white;
+    cursor: pointer;
+}
+
+
+/* Logos */
+
+.navhome {
+    text-decoration: none;
+    color:white;
+    outline: none;
+    display: flex;
+    position: relative;
+    top: -15px;
+    user-select: none;
+}
+
+.navhome:hover {
+    color:#000000;
+    cursor: pointer;
+}
+
+.homepage {
+    width: 20px;
+    position: relative;
+    top: -2px;
+    height: 20px;
+    display: inline-block;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.shopnav {
+    text-decoration: none;
+    cursor: pointer;
+    color:white;
+    position: relative;
+    top: -24px;
+    user-select: none;
+}
+
+.shop {
+    width: 27px;
+    height: 27px;;
+    position: relative;
+    top: 6px;
+    display: inline-block;
+
+}
+
+.shopnav:hover {
+    color:#000000;
+}
+
+.ordernav {
+    color:white;
+    cursor: pointer;
+    position: relative;
+    top: -27.5px;
+    user-select: none;
+}
+
+.order {
+    display: inline-block;
+    position: relative;
+    top: 8px;
+    width: 27p;
+    height: 30px;
+}
+
+.ordernav:hover {
+    color:black;
+}
+
+
+/* Hamburger menu*/
+
+.navmenu {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+
